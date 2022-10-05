@@ -1,7 +1,12 @@
 {
   "name": "@remindgmbh/nuxt-logger",
   "version": "1.0.0",
-  "license": "MIT",
+  "author": "David Mellen <d.mellen@remind.de>",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remindgmbh/eslint-config-nuxt"
+  },
   "type": "module",
   "exports": {
     ".": {

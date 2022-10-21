@@ -24,6 +24,8 @@ export default defineNuxtModule<ModuleOptions>({
             options
         )
 
+        nuxt.options.alias['#nuxt-logger'] = resolver.resolve('runtime')
+
         addImports({
             from: resolver.resolve('runtime/useLogger'),
             name: 'useLogger',

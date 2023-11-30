@@ -1,7 +1,7 @@
-import { addImports, createResolver, defineNuxtModule } from '@nuxt/kit'
+import { addImportsDir, createResolver, defineNuxtModule } from '@nuxt/kit'
 import { defu } from 'defu'
 import { name, version } from '../package.json'
-import { LogLevel } from './runtime/logLevel'
+import { LogLevel } from './runtime/model'
 
 export interface ModuleOptions {
     level: LogLevel
@@ -21,14 +21,11 @@ export default defineNuxtModule<ModuleOptions>({
 
         nuxt.options.runtimeConfig.public.logger = defu(
             nuxt.options.runtimeConfig.public.logger,
-            options
+            options,
         )
 
         nuxt.options.alias['#nuxt-logger'] = resolver.resolve('runtime')
 
-        addImports({
-            from: resolver.resolve('runtime/useLogger'),
-            name: 'useLogger',
-        })
+        addImportsDir(resolver.resolve('runtime/composables/**/*'))
     },
 })

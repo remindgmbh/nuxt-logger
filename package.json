@@ -5,7 +5,7 @@
     "license": "BSD-3-Clause",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/remindgmbh/eslint-config-nuxt.git"
+        "url": "git+https://github.com/remindgmbh/nuxt-logger.git"
     },
     "type": "module",
     "exports": {

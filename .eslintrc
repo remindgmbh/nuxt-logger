@@ -1,5 +1,5 @@
 {
-  "extends": [
-    "@remindgmbh/eslint-config-nuxt"
-  ]
+    "extends": [
+        "@remindgmbh/eslint-config-nuxt"
+    ]
 }

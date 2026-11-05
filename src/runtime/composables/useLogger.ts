@@ -1,5 +1,5 @@
-import { useRuntimeConfig } from '#imports'
 import { LogLevel } from '../model'
+import { useRuntimeConfig } from '#imports'
 
 export function useLogger() {
     const config = useRuntimeConfig()

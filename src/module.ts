@@ -1,20 +1,20 @@
 import { addImportsDir, createResolver, defineNuxtModule } from '@nuxt/kit'
-import { defu } from 'defu'
 import { name, version } from '../package.json'
 import { LogLevel } from './runtime/model'
+import { defu } from 'defu'
 
 export interface ModuleOptions {
     level: LogLevel
 }
 
 export default defineNuxtModule<ModuleOptions>({
-    meta: {
-        name,
-        version,
-        configKey: 'logger',
-    },
     defaults: {
         level: LogLevel.Warn,
+    },
+    meta: {
+        configKey: 'logger',
+        name,
+        version,
     },
     setup(options, nuxt) {
         const resolver = createResolver(import.meta.url)

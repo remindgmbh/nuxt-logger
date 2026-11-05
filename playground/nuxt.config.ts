@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
-    modules: ['@remindgmbh/nuxt-logger'],
     logger: {
         level: 3,
     },
+    modules: ['@remindgmbh/nuxt-logger'],
 })
